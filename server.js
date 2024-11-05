@@ -19,6 +19,12 @@ connectDB();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// CORS configuration for cross-origin requests
+app.use(cors({
+  origin: "https://shopzart.onrender.com",
+  credentials: true 
+}));
+
 //rest object
 const app = express();
 
